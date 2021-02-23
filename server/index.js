@@ -1,7 +1,7 @@
 const Koa = require('koa');
 const path = require('path')
 const static = require('koa-static')
-const staticPath = '../redux-study'
+const staticPath = '../src'
 
 const app = new Koa();
 

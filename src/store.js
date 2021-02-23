@@ -1,4 +1,5 @@
 import reducer from './reducer.js'
-const store = Redux.createStore(reducer)
+import createStore from './redux/createStore.js'
+const store = createStore(reducer)
 
 export default store
