@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redux study</title>
+</head>
+<body>
+    <div>
+        <input
+            type="text"
+            name="add-todo-list"
+        />
+        <button id="addTodoList">add todo list</button>
+        <h3>代办事项：</h3>
+        <ul id="todo-list"></ul>
+    </div>
+</body>
+<!-- 引入redux源码 -->
+<script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+<script type="module" crossorigin>
+    import store from './store.js'
+    import render from './render.js'
+    import './event.js'
+    // 视图订阅数据更新
+    store.subscribe(render)
+</script>
+</html>
