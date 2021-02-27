@@ -3,7 +3,6 @@ import {
     ADD_TODO
 } from './action.js'
 
-
 let initialState = [
     {
         id: '99',

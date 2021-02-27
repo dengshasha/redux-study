@@ -2,7 +2,7 @@ import {
     INCREASE,
     ADD_TODO
 } from './action.js'
-
+import combineReducer from './redux/combineReducer.js'
 
 let initialState = [
     {
@@ -26,7 +26,7 @@ function counter(state=0, action) {
     }
 }
 
-export default {
+export default combineReducer({
     todoList,
     counter
-}
+})

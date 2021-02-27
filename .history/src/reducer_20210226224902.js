@@ -1,9 +1,3 @@
-import {
-    INCREASE,
-    ADD_TODO
-} from './action.js'
-
-
 let initialState = [
     {
         id: '99',
@@ -12,7 +6,7 @@ let initialState = [
 ]
 function todoList(state=initialState, action) {
     switch(action.type) {
-        case ADD_TODO:
+        case 'ADD_TODO_LIST':
             return state.concat(action.data)
         default: return state
     }
@@ -20,13 +14,10 @@ function todoList(state=initialState, action) {
 
 function counter(state=0, action) {
     switch(action.type) {
-        case INCREASE:
+        case 'INCRESE':
             return state+1
         default: return state
     }
 }
 
-export default {
-    todoList,
-    counter
-}
+export default todoList

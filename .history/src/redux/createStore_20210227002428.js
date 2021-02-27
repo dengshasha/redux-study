@@ -1,9 +1,6 @@
 function createStore(reducer, enhancer) {
     let state;
     let listeners = []
-    if(typeof enhancer === 'function') {
-        enhancer(reducer)
-    }
     function dispatch(action) {
         state = reducer(state, action)
         for(let i = 0; i < listeners.length; i++) {
